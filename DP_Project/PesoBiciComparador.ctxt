@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PesoBiciComparador
+comment0.text=\r\n\ Comparador\ de\ biciceltas\ por\ su\ peso.\ Orden\ descendente\r\n
+comment1.params=b1\ b2
+comment1.target=int\ compare(Bicicleta,\ Bicicleta)
+numComments=2

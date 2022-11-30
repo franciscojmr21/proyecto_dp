@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=TiempoCiclistaComparador
+comment0.text=\r\n\ Comparador\ de\ ciclistas\ por\ su\ tiempo.\ Orden\ descendente\r\n
+comment1.params=c1\ c2
+comment1.target=int\ compare(Ciclista,\ Ciclista)
+numComments=2
