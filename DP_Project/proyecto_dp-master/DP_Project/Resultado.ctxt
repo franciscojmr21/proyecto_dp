@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Resultado
+comment1.params=tiempo\ abandono\ etapa\ energia
+comment1.target=Resultado(double,\ boolean,\ Etapa,\ double)
+comment2.params=
+comment2.target=double\ getTiempo()
+comment3.params=tiempo
+comment3.target=void\ setTiempo(double)
+comment4.params=
+comment4.target=boolean\ isAbandono()
+comment5.params=abandono
+comment5.target=void\ setAbandono(boolean)
+comment6.params=
+comment6.target=Etapa\ getEtapa()
+comment7.params=etapa
+comment7.target=void\ setEtapa(Etapa)
+comment8.params=
+comment8.target=double\ getEnergia()
+comment9.params=energia
+comment9.target=void\ setEnergia(double)
+numComments=10
