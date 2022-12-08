@@ -103,14 +103,24 @@ public class EquipoImpl implements Equipo
     }
     
     public void asignarBicis(){
+        int j=0;
+        while(j<L_Ciclistas.size()){
+            Ciclista c = L_Ciclistas.get(j);
+            if(c.getAbandono()){
+                L_CiclistasAbandonado.add(c);
+                L_Ciclistas.remove(c);
+            }else{
+                j++;
+            }
+        }
+        
         int i=0;
         Collections.sort(L_Ciclistas, C_Ciclistas);
         Collections.sort(L_Bicicletas, C_Bicicletas);
         for(Ciclista c : L_Ciclistas){
-            if(i < L_Bicicletas.size()){
+            
+            if(i < L_Bicicletas.size() && !c.getAbandono()){
                 c.setBici(L_Bicicletas.get(i));
-            }else{
-                insertarCiclistaAbandonado(c);
             }
             i++;
         }

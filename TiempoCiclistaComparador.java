@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Collections;
 /**
  * Comparador de ciclistas por su tiempo. Orden descendente
  */
@@ -9,7 +10,7 @@ public class TiempoCiclistaComparador implements Comparator<Ciclista>
     {
         if(Math.abs(c1.getResultados().get(c1.getResultados().size()-1).getTiempo() - c2.getResultados().get(c1.getResultados().size()-1).getTiempo()) <= 0.001)
         {
-            return 0;
+            return Collections.reverseOrder(new NombreCiclistaComparador()).compare(c1,c2);
         }
         else if(c1.getResultados().get(c1.getResultados().size()-1).getTiempo() < c2.getResultados().get(c1.getResultados().size()-1).getTiempo())
         {

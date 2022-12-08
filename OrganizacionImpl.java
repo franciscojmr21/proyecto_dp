@@ -139,7 +139,7 @@ public class OrganizacionImpl implements Organizacion
         
         for(Ciclista c : L_CiclistasCarreraAbandono){
             res.append("¡¡¡ Ha abandonado " + c.getNombreC() + " - ");
-            res.append("Tiempo: " + Math.round((c.getResultado(etapa).getTiempo())*100d) / 100d + " minutos @@@");
+            res.append("Tiempo: " + c.getEnergia());
             res.append(" - Además ha abandonado para el resto del Campeonato !!!\n");
         }
 
@@ -252,6 +252,7 @@ public class OrganizacionImpl implements Organizacion
         Collections.sort(L_Equipos, new TiempoMedioTotalEquipoComparador());
         int k = 1;
         for(Equipo e : L_Equipos){
+            Collections.sort(e.getL_Ciclistas(), Collections.reverseOrder(new EnergiaCiclistaComparador()));
             System.out.println("@@@ Posición("+k+") "+e.getNombre()+" con "+Math.round((e.getTiempoMedioTotal())*100d) / 100d+" mimutos de media @@@");
             System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
             System.out.println("%%% "+e.getNombre()+" %%% Media Minutos de Ciclistas sin abandonar "+Math.round((e.getTiempoMedioTotal())*100d) / 100d+" %%%\n");
