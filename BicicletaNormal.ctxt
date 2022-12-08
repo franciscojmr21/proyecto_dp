@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BicicletaNormal
+comment1.params=nombre\ peso
+comment1.target=BicicletaNormal(java.lang.String,\ Peso)
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment4.params=
+comment4.target=Peso\ getPeso()
+comment5.params=peso
+comment5.target=void\ setPeso(Peso)
+comment6.params=c\ e
+comment6.target=double\ velocidadBici(Ciclista,\ Etapa)
+comment7.params=c\ e
+comment7.target=double\ tiempoEtapa(Ciclista,\ Etapa)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

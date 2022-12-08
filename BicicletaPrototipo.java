@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BicicletaPrototipo extends Bicicleta{
+public class BicicletaPrototipo extends BicicletaNormal{
 
     public BicicletaPrototipo(String modelo, Peso peso) {
         super(modelo, peso);
@@ -13,7 +13,8 @@ public class BicicletaPrototipo extends Bicicleta{
 
     @Override
     public double tiempoEtapa(Ciclista c, Etapa e) {
-        return Math.round((e.getDistancia().getDistanciaE()/super.velocidadBici(c,e)*c.getHabilidad().getHabilidadE())*100d) / 100d;
+        System.out.println("destreza "+c.destrezaCiclista());
+        return Math.round((e.getDistancia().getDistanciaE()/super.velocidadBici(c,e)*c.destrezaCiclista())*100d) / 100d;
     }
     
     @Override

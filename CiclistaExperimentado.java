@@ -5,13 +5,14 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CiclistaExperimentado extends  Ciclista {
+public class CiclistaExperimentado extends  AbstractCiclista {
 
 
     public CiclistaExperimentado(String nombreC, Habilidad habilidad, double energia, Equipo equipo) {
         super(nombreC, habilidad, energia, equipo);
     }
 
+    @Override
     public double destrezaCiclista() {
         return Math.round((((super.getHabilidad().getHabilidadE() + 4)/130)*10)*100d) / 100d;
     }

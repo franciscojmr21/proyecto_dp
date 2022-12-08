@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CiclistaEstrella extends Ciclista{
+public class CiclistaEstrella extends AbstractCiclista{
 
     private double popularidad;
     private double popularidadAnterior;
@@ -16,8 +16,9 @@ public class CiclistaEstrella extends Ciclista{
         this.popularidadAnterior = 0;
     }
 
+    @Override
     public double destrezaCiclista() {
-        return ((getHabilidad().getHabilidadE() + 6)/140)*10;
+        return Math.round((((getHabilidad().getHabilidadE() + 6)/140)*10)*100d) / 100d;
     }
 
     public double getPopularidad() {

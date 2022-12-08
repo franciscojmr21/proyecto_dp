@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BicicletaRapida extends Bicicleta{
+public class BicicletaRapida extends BicicletaNormal{
 
     private double velExtra;
 

@@ -1,40 +1,30 @@
-public class Bicicleta {
-    private String nombre;
-    private Peso peso;
 
-    public Bicicleta(String nombre, Peso peso) {
-        this.nombre = nombre;
-        this.peso = peso;
-    }
+/**
+ * Write a description of interface Bicicleta here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 
-    public String getNombre() {
-        return nombre;
-    }
+public interface Bicicleta
+{
+    /**
+     * An example of a method header - replace this comment with your own
+     * 
+     * @param  y    a sample parameter for a method
+     * @return        the result produced by sampleMethod 
+     */
+    String getNombre();
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre; 
-    }
+    void setNombre(String nombre);
 
-    public Peso getPeso() {
-        return peso;
-    }
+    Peso getPeso();
 
-    public void setPeso(Peso peso) {
-        this.peso = peso;
-    }
+    void setPeso(Peso peso);
 
-    public double velocidadBici(Ciclista c, Etapa e){
-        return Math.round(((c.getHabilidad().getHabilidadE()*100)/(getPeso().getPesoE()*e.getDificultad().getDificultadE()))*100d) / 100d;
-    }
+    double velocidadBici(Ciclista c, Etapa e);
 
-    public double tiempoEtapa(Ciclista c, Etapa e){
-        return Math.round(((e.getDistancia().getDistanciaE()/velocidadBici(c,e))*60)*100d) / 100d;
-    }
+    double tiempoEtapa(Ciclista c, Etapa e);
     
-    public String toString()
-    {
-        String etapaString = "";
-        etapaString = "<Bicicleta: "+this.nombre+"> <peso: "+this.peso.getTipoE()+" (valor: "+this.peso.getPesoE()+")> en etapa ";
-        return etapaString;
-    }
+    String toString();
 }
