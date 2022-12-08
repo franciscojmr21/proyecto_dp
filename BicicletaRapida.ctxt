@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=BicicletaRapida
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BicicletaRapida\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=modelo\ peso\ velExtra
+comment1.target=BicicletaRapida(java.lang.String,\ Peso,\ double)
+comment2.params=
+comment2.target=double\ getVelExtra()
+comment3.params=velExtra
+comment3.target=void\ setVelExtra(double)
+comment4.params=c\ e
+comment4.target=double\ velocidadBici(Ciclista,\ Etapa)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
