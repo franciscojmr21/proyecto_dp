@@ -1,158 +1,55 @@
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Collections;
-import java.util.Iterator;
 /**
- * Write a description of class Equipo here.
+ * Write a description of interface Equipo here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Equipo
+
+public interface Equipo
 {
-    // instance variables - replace the example below with your own
-    private ArrayList<Ciclista> L_Ciclistas;
-    private ArrayList<Ciclista> L_CiclistasAbandonado;
-    private ArrayList<Bicicleta> L_Bicicletas; 
-    private Comparator<Ciclista> C_Ciclistas;
-    private Comparator<Bicicleta> C_Bicicletas;
-    private String nombre;  
-    
     /**
-     * Constructor por defecto de la clase Equipo
+     * An example of a method header - replace this comment with your own
+     * 
+     * @param  y    a sample parameter for a method
+     * @return        the result produced by sampleMethod 
      */
-    public Equipo()
-    {
-        nombre = "";
-        this.L_Ciclistas = new ArrayList<>();
-        this.L_CiclistasAbandonado = new ArrayList<>();
-        this.L_Bicicletas = new ArrayList<>();
-    }
+    void ordenarBicicletas();
 
-    /**
-     * Constructor parametrizado de la clase Equipo 
-     */
-    public Equipo(String nombre, Comparator<Ciclista> C_Ciclistas, Comparator<Bicicleta> C_Bicicletas)
-    {
-        this.nombre = nombre;
-        this.L_Ciclistas = new ArrayList<>();
-        this.L_CiclistasAbandonado = new ArrayList<>();
-        this.L_Bicicletas = new ArrayList<>();
-        this.C_Bicicletas = C_Bicicletas;
-        this.C_Ciclistas = C_Ciclistas;
-    }
+    void ordenarCiclistas();
     
-    public void ordenarBicicletas(){ 
-        Collections.sort(L_Bicicletas, C_Bicicletas);
-    }
-
-    public void ordenarCiclistas(){
-        Collections.sort(L_Ciclistas, C_Ciclistas);
-    }
+    void setNombre(String nombre);
     
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
+    String getNombre();
     
-    public String getNombre(){
-        return this.nombre;
-    }
+    void setL_Bicicletas(ArrayList<Bicicleta> L_Bicicletas);
     
-    public void setL_Bicicletas(ArrayList<Bicicleta> L_Bicicletas){
-        this.L_Bicicletas = L_Bicicletas;
-    }
+    ArrayList<Bicicleta> getL_Bicicletas();
     
-    public ArrayList<Bicicleta> getL_Bicicletas(){
-        return this.L_Bicicletas;
-    }
+    void setL_Ciclistas(ArrayList<Ciclista> L_Ciclistas);
     
-    public void setL_Ciclistas(ArrayList<Ciclista> L_Ciclistas){
-        this.L_Ciclistas = L_Ciclistas;
-    }
+    ArrayList<Ciclista> getL_Ciclistas();
     
-    public ArrayList<Ciclista> getL_Ciclistas(){
-        return this.L_Ciclistas;
-    }
+    void setC_Ciclistas(Comparator<Ciclista> C_Ciclistas);
     
-    public void setC_Ciclistas(Comparator<Ciclista> C_Ciclistas){
-        this.C_Ciclistas = C_Ciclistas;
-    }
+    Comparator<Ciclista> getC_Ciclistas();
     
-    public Comparator<Ciclista> getC_Ciclistas(){
-        return this.C_Ciclistas;
-    }
+    void setC_Bicicletas(Comparator<Bicicleta> C_Bicicletas);
     
-    public void setC_Bicicletas(Comparator<Bicicleta> C_Bicicletas){
-        this.C_Bicicletas = C_Bicicletas;
-    }
+    Comparator<Bicicleta> getC_Bicicletas();
     
-    public Comparator<Bicicleta> getC_Bicicletas(){
-        return this.C_Bicicletas;
-    }
+    void insertarBicicleta(Bicicleta bicicleta);
     
-    public void insertarBicicleta(Bicicleta bicicleta){
-        L_Bicicletas.add(bicicleta);
-    }
+    void insertarCiclista(Ciclista ciclista);
     
-    public void insertarCiclista(Ciclista ciclista){
-        L_Ciclistas.add(ciclista);
-    }
+    void insertarCiclistaAbandonado(Ciclista ciclistaAbandonado);
     
-    public void insertarCiclistaAbandonado(Ciclista ciclistaAbandonado){
-        L_CiclistasAbandonado.add(ciclistaAbandonado);
-    }
+    void asignarBicis();
     
-    public void asignarBicis(){
-        int i=0;
-        Collections.sort(L_Ciclistas, C_Ciclistas);
-        Collections.sort(L_Bicicletas, C_Bicicletas);
-        for(Ciclista c : L_Ciclistas){
-            if(i < L_Bicicletas.size()){
-                c.setBici(L_Bicicletas.get(i));
-            }else{
-                insertarCiclistaAbandonado(c);
-                //L_Ciclistas.remove(c);
-            }
-            i++;
-        }
-    }
+    double getTiempoMedioTotal();
     
-    public double getTiempoMedioTotal(){
-        double total = 0.0;
-        for(Ciclista c : L_Ciclistas){
-            total = total + c.tiempoTotal();
-        }
-        total = Math.round((total/L_Ciclistas.size())*100d) / 100d;
-        return total;
-    }
+    double getTotalPoints();
     
-    public double getTotalPoints()
-    {
-        double totalPoints;
-        totalPoints = 0;
-        Iterator<Ciclista> it;
-        Ciclista ciclista;
-        
-        it = L_Ciclistas.iterator();
-        while(it.hasNext())
-        {
-            ciclista = it.next();
-            totalPoints += ciclista.tiempoTotal();
-        }
-        
-        return totalPoints;
-    }
-    
-    public String toString()
-    {
-        ordenarCiclistas();
-        ordenarBicicletas();
-        StringBuilder res = new StringBuilder();
-        res.append("%%% "+getNombre()+" %%% Media Minutos de Ciclistas sin abandonar "+getTotalPoints()+" %%%\n\n");
-        L_Ciclistas.forEach((n) -> {
-            res.append(n.toString()+"\n");
-        });
-        return res.toString();
-    }
-    
+    String toString();
 }
