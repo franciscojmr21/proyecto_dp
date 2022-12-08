@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=TiempoTotalCiclistaComparador
-comment0.text=\r\n\ Comparador\ de\ ciclistas\ por\ su\ tiempo.\ Orden\ ascendente\r\n
-comment1.params=c1\ c2
-comment1.target=int\ compare(Ciclista,\ Ciclista)
-numComments=2
