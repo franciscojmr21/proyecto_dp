@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ComparadorNombreEtapa
+comment0.text=\r\n\ Comparador\ de\ etapas\ por\ su\ dificultad.\ Orden\ descendente\r\n
+comment1.params=e1\ e2
+comment1.target=int\ compare(Etapa,\ Etapa)
+numComments=2
