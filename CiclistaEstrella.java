@@ -7,8 +7,8 @@
  */
 public class CiclistaEstrella extends AbstractCiclista{
 
-    private double popularidad;
-    private double popularidadAnterior;
+    private int popularidad;
+    private int popularidadAnterior;
 
     public CiclistaEstrella(String nombreC, Habilidad habilidad, double energia, Equipo equipo) {
         super(nombreC, habilidad, energia, equipo);
@@ -21,20 +21,20 @@ public class CiclistaEstrella extends AbstractCiclista{
         return Math.round((((getHabilidad().getHabilidadE() + 6)/140)*10)*100d) / 100d;
     }
 
-    public double getPopularidad() {
+    public int getPopularidad() {
         return popularidad;
     }
     
-    public void setPopularidadAnterior(double popularidad){
+    public void setPopularidadAnterior(int popularidad){
         this.popularidadAnterior = popularidad;
     }
     
-    public double getPopularidadAnterior(){
+    public int getPopularidadAnterior(){
         return this.popularidadAnterior;
     }
 
     public void aumentarPopularidad(Etapa e) {
-        double a = this.popularidad;
+        int a = this.popularidad;
         setPopularidadAnterior(this.popularidad);
         double tiempo = super.getBici().tiempoEtapa(this, e);
         if(tiempo < 160){
@@ -57,9 +57,13 @@ public class CiclistaEstrella extends AbstractCiclista{
         res.append("+++ Con estas condiciones el ciclista "+super.getNombreC()+" con la bicicleta "+super.getBici().getNombre()+" alcanza una velocidad de "+
         Math.round((super.getBici().velocidadBici(this, etapa))*100d) / 100d+" km/hora +++\n");
         
-        if(super.getResultado(etapa).getTiempo() > 0)
+        if(getEnergia()>0)
         {
-            res.append("+++ " + super.getNombreC() + " termina la etapa en " + Math.round((super.getResultado(etapa).getTiempo())*100d) / 100d + " minutos +++\n");          
+            res.append("+++ " + getNombreC() + " termina la etapa en " + getResultado(etapa).getTiempo() + " minutos +++\n");
+        }
+        else{
+            res.append("¡¡¡ El ciclista "+getNombreC()+" se quedó sin energia a falta de "+Math.abs(getEnergia())+" minutos para terminar !!!\n");
+            res.append("¡¡¡ En el momento de quedarse sin energia llevaba en carrera "+Math.round(((getResultado(etapa).getTiempo()+getEnergia()))*100d) / 100d+" minutos !!!\n");
         }
         
         res.append("+++ La energía del ciclista "+super.getNombreC()+" tras la carrera es "+Math.round((super.getEnergia())*100d) / 100d+" +++\n");
@@ -69,7 +73,7 @@ public class CiclistaEstrella extends AbstractCiclista{
             res.append(super.getNombreC());
             res.append(" ha aumentado  y ahora su nivel de popularidad es de: ");
             res.append(getPopularidad());
-            res.append("unidades\n");
+            res.append(" unidades\n");
             res.append("@@@\n");
         }
         if(getPopularidadAnterior()>getPopularidad()){

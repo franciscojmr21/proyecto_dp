@@ -110,6 +110,7 @@ public abstract class AbstractCiclista implements Ciclista {
     public Resultado realizarEtapa(Etapa e){
         double t = bici.tiempoEtapa(this, e);
         boolean abandona = t > getEnergia();
+        setAbandono(abandona);
         double g = energiaRestante(e);
         Resultado r = new Resultado(Math.round((t)*100d) / 100d, abandona, e, Math.round((g)*100d) / 100d);
         resultados.add(r);
@@ -175,9 +176,13 @@ public abstract class AbstractCiclista implements Ciclista {
         res.append("+++ Con estas condiciones el ciclista "+getNombreC()+" con la bicicleta "+getBici().getNombre()+" alcanza una velocidad de "+
         getBici().velocidadBici(this, etapa)+" km/hora +++\n");
         
-        if(getResultado(etapa).getTiempo() > 0)
+        if(getResultado(etapa).getTiempo() > 0 && getEnergia()>0)
         {
-            res.append("+++ " + getNombreC() + " termina la etapa en " + getResultado(etapa).getTiempo() + " minutos +++\n");          
+            res.append("+++ " + getNombreC() + " termina la etapa en " + getResultado(etapa).getTiempo() + " minutos +++\n");
+        }
+        else if(getResultado(etapa).getTiempo() > 0 && getEnergia()<=0){
+            res.append("¡¡¡ El ciclista "+getNombreC()+" se quedó sin energia a falta de "+Math.abs(getEnergia())+" minutos para terminar !!!\n");
+            res.append("¡¡¡ En el momento de quedarse sin energia llevaba en carrera "+(getResultado(etapa).getTiempo()+getEnergia())+" minutos !!!\n");
         }
         
         res.append("+++ La energía del ciclista "+getNombreC()+" tras la carrera es "+getEnergia()+" +++\n");

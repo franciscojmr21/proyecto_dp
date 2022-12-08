@@ -13,7 +13,7 @@ public class BicicletaPrototipo extends BicicletaNormal{
 
     @Override
     public double tiempoEtapa(Ciclista c, Etapa e) {
-        return Math.round((e.getDistancia().getDistanciaE()/super.velocidadBici(c,e)*c.destrezaCiclista())*100d) / 100d;
+        return Math.round((e.getDistancia().getDistanciaE()/(super.velocidadBici(c,e)*c.destrezaCiclista()))*100d) / 100d;
     }
     
     @Override

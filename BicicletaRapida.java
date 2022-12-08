@@ -11,7 +11,7 @@ public class BicicletaRapida extends BicicletaNormal{
 
     public BicicletaRapida(String modelo, Peso peso, double velExtra ) {
         super(modelo, peso);
-        this.velExtra = Math.round((velExtra)*100d) / 100d;
+        this.velExtra = velExtra;
     }
 
     public double getVelExtra() {
