@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Etapa
+comment1.params=nombre\ dificultad\ distancia
+comment1.target=Etapa(java.lang.String,\ Dificultad,\ Distancia)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment4.params=
+comment4.target=Dificultad\ getDificultad()
+comment5.params=dificultad
+comment5.target=void\ setDificultad(Dificultad)
+comment6.params=
+comment6.target=Distancia\ getDistancia()
+comment7.params=distancia
+comment7.target=void\ setDistancia(Distancia)
+comment8.params=etapa
+comment8.target=boolean\ equals(Etapa)
+comment9.params=
+comment9.target=int\ hashCode()
+numComments=11
