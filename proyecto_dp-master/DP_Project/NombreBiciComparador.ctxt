@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=NombreBiciComparador
-comment0.text=\r\n\ Comparador\ de\ bicicletas\ por\ su\ nombre.\ Orden\ alfabetico\r\n
-comment1.params=b1\ b2
-comment1.target=int\ compare(Bicicleta,\ Bicicleta)
-numComments=2
