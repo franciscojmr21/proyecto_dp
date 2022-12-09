@@ -7,11 +7,11 @@ public class TiempoMedioTotalEquipoComparador implements Comparator<Equipo>
 {
     public int compare(Equipo e1,Equipo e2)
     {
-        if(Math.abs(e1.getTiempoMedioTotal() - e2.getTiempoMedioTotal()) <= 0.001)
+        if(Math.abs(e1.getTiempoMedioTotalSinAbandonar()- e2.getTiempoMedioTotalSinAbandonar()) <= 0.001)
         {
             return 0;
         }
-        else if(e1.getTiempoMedioTotal() > e2.getTiempoMedioTotal())
+        else if(e1.getTiempoMedioTotalSinAbandonar() > e2.getTiempoMedioTotalSinAbandonar())
         {
             return 1;
         }

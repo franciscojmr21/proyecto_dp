@@ -8,6 +8,7 @@ public class OrganizacionImpl implements Organizacion
     private ArrayList<Equipo> L_Equipos;
     private ArrayList<Ciclista> L_CiclistasCarrera;
     private ArrayList<Ciclista> L_CiclistasCarreraAbandono;
+    private ArrayList<Ciclista> L_CiclistasCarreraAbandonoTotal;
     private Comparator<Etapa> cEtapa;
     /**
      * Constructor for objects of class Organizacion
@@ -17,6 +18,7 @@ public class OrganizacionImpl implements Organizacion
         L_Equipos = new ArrayList<>();
         L_CiclistasCarrera = new ArrayList<>();
         L_CiclistasCarreraAbandono = new ArrayList<>();
+        L_CiclistasCarreraAbandonoTotal = new ArrayList<>();
         L_Etapas = new ArrayList<>();
         this.cEtapa = cEtapa;
     }
@@ -132,6 +134,7 @@ public class OrganizacionImpl implements Organizacion
             }
             else{
                 L_CiclistasCarreraAbandono.add(ciclista);
+                L_CiclistasCarreraAbandonoTotal.add(ciclista);
                 L_CiclistasCarrera.remove(i);
                 i--;
             }
@@ -231,15 +234,19 @@ public class OrganizacionImpl implements Organizacion
             j++;
         }
         
-        if(L_CiclistasCarreraAbandono.size()>0){
+        if(L_CiclistasCarreraAbandonoTotal.size()>0){
             System.out.println();
             System.out.println("****************************************************");
             System.out.println("************** CICLISTAS QUE ABANDONARON **************");
             System.out.println("****************************************************");
-            for(Ciclista c : L_CiclistasCarreraAbandono){
+            for(Ciclista c : L_CiclistasCarreraAbandonoTotal){
                 System.out.println("--- ciclista Abandonado: "+c.getNombreC()+" - Puntos Totales Anulados: "+c.tiempoTotal()+" ---");
                 for(Resultado r : c.getResultados()){
-                    System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getTiempo())*100d) / 100d+" minutos");
+                    if(r.isAbandono()){
+                        System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getEnergia())*100d) / 100d+" minutos");
+                    }else{
+                        System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getTiempo())*100d) / 100d+" minutos");
+                    }
                 }
             }
         }
@@ -252,10 +259,10 @@ public class OrganizacionImpl implements Organizacion
         Collections.sort(L_Equipos, new TiempoMedioTotalEquipoComparador());
         int k = 1;
         for(Equipo e : L_Equipos){
-            Collections.sort(e.getL_Ciclistas(), Collections.reverseOrder(new EnergiaCiclistaComparador()));
-            System.out.println("@@@ Posición("+k+") "+e.getNombre()+" con "+Math.round((e.getTiempoMedioTotal())*100d) / 100d+" mimutos de media @@@");
+            e.ordenFinalCampeonato();
+            System.out.println("@@@ Posición("+k+") "+e.getNombre()+" con "+Math.round((e.getTiempoMedioTotalSinAbandonar())*100d) / 100d+" mimutos de media @@@");
             System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-            System.out.println("%%% "+e.getNombre()+" %%% Media Minutos de Ciclistas sin abandonar "+Math.round((e.getTiempoMedioTotal())*100d) / 100d+" %%%\n");
+            System.out.println("%%% "+e.getNombre()+" %%% Media Minutos de Ciclistas sin abandonar "+Math.round((e.getTiempoMedioTotalSinAbandonar())*100d) / 100d+" %%%\n");
             for(Ciclista c : e.getL_Ciclistas()){
                 System.out.println(c.toString());
             }
