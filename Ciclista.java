@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 /**
  * Interfaz con las funcionalidades del ciclista y almacena sus datos.
  * 
@@ -7,10 +8,21 @@ import java.util.ArrayList;
  */
 public interface Ciclista
 {
+    /**
+     * Devuelve el nombre de la etapa actual
+     * @return etapaActual String
+     */
+    String getEtapaActual();
+
+    /**
+     * Método que establece el nombre de la etapa actual
+     * @param etapaActual String
+     */
+    void setEtapaActual(String etapaActual);
     
     /**
      * Devuelve si el ciclista ha abandonado el campeonato
-     * @return abandono BOOLEAN
+     * @return abandono boolean
      */
     boolean getAbandono();
 
@@ -69,16 +81,16 @@ public interface Ciclista
     void setEnergia(double energia);
     
     /**
-     * Devuelve una lista con los resultados de las etapas del ciclista
-     * @return resultados ArrayList<Resultado>
+     * Devuelve el HashMap con los resultados de las etapas del ciclista
+     * @return resultados HashMap<String,Resultado>
      */
-    ArrayList<Resultado> getResultados();
+    HashMap<String,Resultado> getResultados();
 
     /**
-     * Método que establece la lista de resultados del campeonato del ciclista
-     * @param resultados ArrayList<Resultado>
+     * Método que establece el HashMap de resultados del campeonato del ciclista
+     * @param resultados HashMap<String,Resultado>
      */
-    void setResultados(ArrayList<Resultado> resultados);
+    void setResultados(HashMap<String,Resultado> resultados);
     
     /**
      * Devuelve el equipo al que pertenece el ciclista

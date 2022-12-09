@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 import java.util.Iterator;
-
+import java.util.HashMap;
+import java.util.ArrayList;
 /**
  * Clase que ejecuta las funcionalidades del ciclista y almacena sus datos.
  * Esta clase es abstracta debido a que no se puede instanciar ningún ciclista que no pertenezca a una de sus subclases.
@@ -13,9 +13,10 @@ public abstract class AbstractCiclista implements Ciclista {
     private Bicicleta bici;
     private Habilidad habilidad;
     private double energia;
-    private ArrayList<Resultado> resultados;
+    private HashMap<String,Resultado> resultados;
     private Equipo equipo;
     private boolean abandono;
+    private String etapaActual;
     
     /**                                
      * Constructor de la clase Ciclista
@@ -31,9 +32,19 @@ public abstract class AbstractCiclista implements Ciclista {
         this.habilidad = habilidad;
         this.energia = energia;
         this.equipo = equipo;
-        resultados = new ArrayList<>();
+        resultados = new HashMap <>();
         this.abandono = false;
     } 
+    
+    @Override
+    public String getEtapaActual() {
+        return etapaActual;
+    }
+
+    @Override
+    public void setEtapaActual(String etapaActual) {
+        this.etapaActual = etapaActual;
+    }
     
     @Override
     public boolean getAbandono() {
@@ -86,12 +97,12 @@ public abstract class AbstractCiclista implements Ciclista {
     }
 
     @Override
-    public ArrayList<Resultado> getResultados() {
+    public HashMap<String,Resultado> getResultados() {
         return resultados;
     }
 
     @Override
-    public void setResultados(ArrayList<Resultado> resultados) {
+    public void setResultados(HashMap<String, Resultado> resultados) {
         this.resultados = resultados;
     }
 
@@ -120,7 +131,7 @@ public abstract class AbstractCiclista implements Ciclista {
         setAbandono(abandona);
         double g = energiaRestante(e);
         Resultado r = new ResultadoImpl(Math.round((t)*100d) / 100d, abandona, e, Math.round((g)*100d) / 100d);
-        resultados.add(r);
+        resultados.put(r.getEtapa().getNombre(),r);
         setEnergia(Math.round((g)*100d) / 100d);
         return r;
     }
@@ -142,7 +153,8 @@ public abstract class AbstractCiclista implements Ciclista {
     @Override
     public double tiempoTotal(){
         double t = 0;
-        for (Resultado r: resultados){
+        ArrayList<Resultado> res = new ArrayList<Resultado>(resultados.values());
+        for (Resultado r: res){
             if(!r.isAbandono()) {
                 t = t + r.getTiempo();
             }
@@ -163,14 +175,7 @@ public abstract class AbstractCiclista implements Ciclista {
     @Override
     public Resultado getResultado(Etapa etapa)
     {
-        for(Resultado resultado : resultados)
-        {
-            if(etapa.equals(resultado.getEtapa()))
-            {
-                return resultado;
-            }
-        }
-        return null;
+        return resultados.get(etapa.getNombre());
     }
     
     @Override
