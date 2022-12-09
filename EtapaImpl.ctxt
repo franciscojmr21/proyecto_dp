@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=EtapaImpl
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ de\ la\ etapa\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.8)\r\n
 comment1.params=nombre\ dificultad\ distancia
 comment1.target=EtapaImpl(java.lang.String,\ Dificultad,\ Distancia)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ EtapaImpl\r\n\ \r\n\ @param\ nombreC\ String\ nombre\ de\ la\ etapa\r\n\ @param\ dificultad\ Dificultad\ enum\ con\ la\ dificultad\ de\ la\ etapa\r\n\ @param\ distancia\ Distancia\ enum\ con\ la\ distancia\ de\ la\ etapa\r\n\ \r\n
 comment10.params=
 comment10.target=java.lang.String\ toString()
 comment2.params=

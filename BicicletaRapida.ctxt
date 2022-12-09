@@ -1,12 +1,15 @@
 #BlueJ class context
 comment0.target=BicicletaRapida
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BicicletaRapida\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ de\ la\ bicicleta\ rapida\ y\ almacena\ sus\ datos.\r\n\ Esta\ clase\ extiende\ de\ BicicletaNormal\ ya\ que\ tiene\ propiedades\ distintas.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.9)\r\n
 comment1.params=modelo\ peso\ velExtra
 comment1.target=BicicletaRapida(java.lang.String,\ Peso,\ double)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ BicicletaNormal\r\n\ \r\n\ @param\ nombreC\ String\ nombre\ de\ la\ bicicleta\r\n\ @param\ peso\ Peso\ enum\ con\ el\ peso\ de\ la\ bicicleta\r\n\ @param\ velExtra\ double\ velocidad\ extra\ de\ la\ bicicleta\r\n\ \r\n
 comment2.params=
 comment2.target=double\ getVelExtra()
+comment2.text=\r\n\ Devuelve\ la\ velocidad\ extra\ de\ la\ bicicleta\r\n\ @return\ velocidadExtra\ double\r\n
 comment3.params=velExtra
 comment3.target=void\ setVelExtra(double)
+comment3.text=\r\n\ M\u00E9todo\ que\ establece\ la\ velocidad\ extra\ de\ la\ bicicleta\r\n\ @param\ velExtra\ double\r\n
 comment4.params=c\ e
 comment4.target=double\ velocidadBici(Ciclista,\ Etapa)
 comment5.params=

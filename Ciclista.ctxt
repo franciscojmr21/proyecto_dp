@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Ciclista
-comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ del\ ciclista\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.17)\r\n
+comment0.text=\r\n\ Interfaz\ con\ las\ funcionalidades\ del\ ciclista\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.17)\r\n
 comment1.params=
 comment1.target=boolean\ getAbandono()
 comment1.text=\r\n\ Devuelve\ si\ el\ ciclista\ ha\ abandonado\ el\ campeonato\r\n\ @return\ abandono\ BOOLEAN\r\n

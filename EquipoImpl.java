@@ -3,10 +3,11 @@ import java.util.Comparator;
 import java.util.Collections;
 import java.util.Iterator;
 /**
- * Write a description of class Equipo here.
+ * Clase que ejecuta las funcionalidades del equipo y almacena sus datos.
+ * Esta clase implementa Equipo.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.8)
  */
 public class EquipoImpl implements Equipo
 {
@@ -29,8 +30,13 @@ public class EquipoImpl implements Equipo
         this.L_Bicicletas = new ArrayList<>();
     }
 
-    /**
-     * Constructor parametrizado de la clase Equipo 
+    /**                                
+     * Constructor de la clase equipo
+     * 
+     * @param nombre String nombre del equipo
+     * @param C_Ciclistas Comparator<Ciclista> 
+     * @param C_Bicicletas Comparator<Bicicleta>
+     * 
      */
     public EquipoImpl(String nombre, Comparator<Ciclista> C_Ciclistas, Comparator<Bicicleta> C_Bicicletas)
     {
@@ -42,66 +48,82 @@ public class EquipoImpl implements Equipo
         this.C_Ciclistas = C_Ciclistas;
     }
     
+    @Override
     public void ordenarBicicletas(){ 
         Collections.sort(L_Bicicletas, C_Bicicletas);
     }
 
+    @Override
     public void ordenarCiclistas(){
         Collections.sort(L_Ciclistas, C_Ciclistas);
     }
     
+    @Override
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
     
+    @Override
     public String getNombre(){
         return this.nombre;
     }
     
+    @Override
     public void setL_Bicicletas(ArrayList<Bicicleta> L_Bicicletas){
         this.L_Bicicletas = L_Bicicletas;
     }
     
+    @Override
     public ArrayList<Bicicleta> getL_Bicicletas(){
         return this.L_Bicicletas;
     }
     
+    @Override
     public void setL_Ciclistas(ArrayList<Ciclista> L_Ciclistas){
         this.L_Ciclistas = L_Ciclistas;
     }
     
+    @Override
     public ArrayList<Ciclista> getL_Ciclistas(){
         return this.L_Ciclistas;
     }
     
+    @Override
     public void setC_Ciclistas(Comparator<Ciclista> C_Ciclistas){
         this.C_Ciclistas = C_Ciclistas;
     }
     
+    @Override
     public Comparator<Ciclista> getC_Ciclistas(){
         return this.C_Ciclistas;
     }
     
+    @Override
     public void setC_Bicicletas(Comparator<Bicicleta> C_Bicicletas){
         this.C_Bicicletas = C_Bicicletas;
     }
     
+    @Override
     public Comparator<Bicicleta> getC_Bicicletas(){
         return this.C_Bicicletas;
     }
     
+    @Override
     public void insertarBicicleta(Bicicleta bicicleta){
         L_Bicicletas.add(bicicleta);
     }
     
+    @Override
     public void insertarCiclista(Ciclista ciclista){
         L_Ciclistas.add(ciclista);
     }
     
+    @Override
     public void insertarCiclistaAbandonado(Ciclista ciclistaAbandonado){
         L_CiclistasAbandonado.add(ciclistaAbandonado);
     }
     
+    @Override
     public void asignarBicis(){
         int j=0;
         while(j<L_Ciclistas.size()){
@@ -126,6 +148,7 @@ public class EquipoImpl implements Equipo
         }
     }
     
+    @Override
     public double getTiempoMedioTotal(){
         double total = 0.0;
         for(Ciclista c : L_Ciclistas){
@@ -135,6 +158,7 @@ public class EquipoImpl implements Equipo
         return total;
     }
     
+    @Override
     public double getTiempoMedioTotalSinAbandonar(){
         double total = 0.0;
         int count = 0;
@@ -148,6 +172,7 @@ public class EquipoImpl implements Equipo
         return total;
     }
     
+    @Override
     public double getTotalPoints()
     {
         double totalPoints;
@@ -165,6 +190,7 @@ public class EquipoImpl implements Equipo
         return totalPoints;
     }
     
+    @Override
     public void ordenFinalCampeonato(){
         ArrayList<Ciclista> L_CiclistasNoAbandonos = new ArrayList<>();
         for(Ciclista c : L_Ciclistas){
@@ -185,6 +211,7 @@ public class EquipoImpl implements Equipo
         }
     }
     
+    @Override
     public String toString()
     {
         ordenarCiclistas();
@@ -196,5 +223,4 @@ public class EquipoImpl implements Equipo
         });
         return res.toString();
     }
-    
 }

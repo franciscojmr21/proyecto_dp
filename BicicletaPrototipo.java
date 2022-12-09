@@ -1,12 +1,20 @@
 
 /**
- * Write a description of class BicicletaPrototipo here.
+ * Clase que ejecuta las funcionalidades de la bicicleta prototipo y almacena sus datos.
+ * Esta clase extiende de BicicletaNormal ya que tiene propiedades distintas.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.5)
  */
 public class BicicletaPrototipo extends BicicletaNormal{
 
+    /**                                
+     * Constructor de la clase BicicletaNormal
+     * 
+     * @param nombreC String nombre de la bicicleta
+     * @param peso Peso enum con el peso de la bicicleta
+     * 
+     */
     public BicicletaPrototipo(String modelo, Peso peso) {
         super(modelo, peso);
     }

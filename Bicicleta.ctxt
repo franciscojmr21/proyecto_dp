@@ -1,19 +1,25 @@
 #BlueJ class context
 comment0.target=Bicicleta
-comment0.text=\r\n\ Write\ a\ description\ of\ interface\ Bicicleta\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Interfaz\ con\ las\ funcionalidades\ del\ equipo\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.4)\r\n
 comment1.params=
 comment1.target=java.lang.String\ getNombre()
-comment1.text=\r\n\ An\ example\ of\ a\ method\ header\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ \ \ \ the\ result\ produced\ by\ sampleMethod\ \r\n
+comment1.text=\r\n\ Devuelve\ el\ nombre\ de\ la\ bicicleta\r\n\ @return\ nombre\ String\r\n
 comment2.params=nombre
 comment2.target=void\ setNombre(java.lang.String)
+comment2.text=\r\n\ M\u00E9todo\ que\ establece\ el\ nombre\ de\ la\ bicicleta\r\n\ @param\ nombre\ String\r\n
 comment3.params=
 comment3.target=Peso\ getPeso()
+comment3.text=\r\n\ Devuelve\ el\ peso\ de\ la\ bicicleta\r\n\ @return\ peso\ Peso\r\n
 comment4.params=peso
 comment4.target=void\ setPeso(Peso)
+comment4.text=\r\n\ M\u00E9todo\ que\ establece\ el\ peso\ de\ la\ bicicleta\r\n\ @param\ peso\ Peso\r\n
 comment5.params=c\ e
 comment5.target=double\ velocidadBici(Ciclista,\ Etapa)
+comment5.text=\r\n\ Devuelve\ la\ velocidad\ de\ la\ bicicleta\ dado\ un\ ciclista\ en\ una\ etapa\r\n\ @param\ c\ Ciclista\r\n\ @param\ e\ Etapa\r\n\ @return\ velocidad\ double\r\n
 comment6.params=c\ e
 comment6.target=double\ tiempoEtapa(Ciclista,\ Etapa)
+comment6.text=\r\n\ Devuelve\ la\ tiempo\ que\ tarda\ una\ bicicleta\ dado\ un\ ciclista\ en\ una\ etapa\r\n\ @param\ c\ Ciclista\r\n\ @param\ e\ Etapa\r\n\ @return\ tiempoEtapa\ double\r\n
 comment7.params=
 comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ Devuelve\ una\ cadena\ con\ los\ datos\ de\ la\ bicicleta\r\n\ @return\ datosBicicleta\ String\r\n
 numComments=8

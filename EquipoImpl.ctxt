@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EquipoImpl
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Equipo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ del\ equipo\ y\ almacena\ sus\ datos.\r\n\ Esta\ clase\ implementa\ Equipo.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.8)\r\n
 comment1.params=
 comment1.target=EquipoImpl()
 comment1.text=\r\n\ Constructor\ por\ defecto\ de\ la\ clase\ Equipo\r\n
@@ -26,7 +26,7 @@ comment19.params=
 comment19.target=double\ getTiempoMedioTotal()
 comment2.params=nombre\ C_Ciclistas\ C_Bicicletas
 comment2.target=EquipoImpl(java.lang.String,\ java.util.Comparator,\ java.util.Comparator)
-comment2.text=\r\n\ Constructor\ parametrizado\ de\ la\ clase\ Equipo\ \r\n
+comment2.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ equipo\r\n\ \r\n\ @param\ nombre\ String\ nombre\ del\ equipo\r\n\ @param\ C_Ciclistas\ Comparator<Ciclista>\ \r\n\ @param\ C_Bicicletas\ Comparator<Bicicleta>\r\n\ \r\n
 comment20.params=
 comment20.target=double\ getTiempoMedioTotalSinAbandonar()
 comment21.params=

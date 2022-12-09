@@ -1,6 +1,9 @@
 import java.util.Comparator;
 /**
- * Comparador de etapas por su dificultad. Orden ascendente
+ * Comparador de etapas por su dificultad. Orden ascendente. En caso de igualdad por distancia
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.2)
  */
 
 public class ComparadorDificultadEtapa implements Comparator<Etapa>

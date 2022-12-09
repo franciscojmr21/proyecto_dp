@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Clase que ejecuta las funcionalidades del ciclista y almacena sus datos.
+ * Interfaz con las funcionalidades del ciclista y almacena sus datos.
  * 
  * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
  * @version (1.17)

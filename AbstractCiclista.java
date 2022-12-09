@@ -119,7 +119,7 @@ public abstract class AbstractCiclista implements Ciclista {
         boolean abandona = t > getEnergia();
         setAbandono(abandona);
         double g = energiaRestante(e);
-        Resultado r = new Resultado(Math.round((t)*100d) / 100d, abandona, e, Math.round((g)*100d) / 100d);
+        Resultado r = new ResultadoImpl(Math.round((t)*100d) / 100d, abandona, e, Math.round((g)*100d) / 100d);
         resultados.add(r);
         setEnergia(Math.round((g)*100d) / 100d);
         return r;

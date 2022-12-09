@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ComparadorDistanciaEtapa
-comment0.text=\r\n\ Comparador\ de\ etapas\ por\ su\ distancia.\ Orden\ ascendente\r\n
+comment0.text=\r\n\ Comparador\ de\ etapas\ por\ su\ distancia.\ Orden\ ascendente.\ En\ caso\ de\ igualdad\ por\ nombre\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.2)\r\n
 comment1.params=e1\ e2
 comment1.target=int\ compare(Etapa,\ Etapa)
 numComments=2

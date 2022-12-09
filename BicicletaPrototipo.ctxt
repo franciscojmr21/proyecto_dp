@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=BicicletaPrototipo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BicicletaPrototipo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ de\ la\ bicicleta\ prototipo\ y\ almacena\ sus\ datos.\r\n\ Esta\ clase\ extiende\ de\ BicicletaNormal\ ya\ que\ tiene\ propiedades\ distintas.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.5)\r\n
 comment1.params=modelo\ peso
 comment1.target=BicicletaPrototipo(java.lang.String,\ Peso)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ BicicletaNormal\r\n\ \r\n\ @param\ nombreC\ String\ nombre\ de\ la\ bicicleta\r\n\ @param\ peso\ Peso\ enum\ con\ el\ peso\ de\ la\ bicicleta\r\n\ \r\n
 comment2.params=c\ e
 comment2.target=double\ tiempoEtapa(Ciclista,\ Etapa)
 comment3.params=
