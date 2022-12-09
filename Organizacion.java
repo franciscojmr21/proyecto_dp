@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.TreeSet;
 /**
  * Interfaz con las funcionalidades de la organizacion.
  * 
@@ -8,16 +9,16 @@ import java.util.ArrayList;
 public interface Organizacion
 {
     /**
-     * Método que establece la lista de etapas del campeonato
-     * @param L_Etapas ArrayList<Etapa>
+     * Método que establece el TreeSet de etapas del campeonato
+     * @param L_Etapas TreeSet<Etapa>
      */
-    void setEtapa(ArrayList<Etapa> L_Etapas);
+    void setEtapa(TreeSet<Etapa> L_Etapas);
     
     /**
-     * Devuelve una lista de etapas que posee el campeonato
-     * @return l_etapas ArrayList<Etapa>
+     * Devuelve el TreeSet de etapas que posee el campeonato
+     * @return l_etapas TreeSet<Etapa>
      */
-    ArrayList<Etapa> getEtapa();
+    TreeSet<Etapa> getEtapa();
     
     /**
      * Método que añade una etapa al campeonato

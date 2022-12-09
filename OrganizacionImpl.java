@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.TreeSet;
 /**
  * Clase que ejecuta las funcionalidades de la organizacion y almacena sus datos.
  * 
@@ -10,7 +11,7 @@ import java.util.Comparator;
  */
 public class OrganizacionImpl implements Organizacion
 {
-    private ArrayList<Etapa> L_Etapas;
+    private TreeSet <Etapa> L_Etapas;
     private ArrayList<Equipo> L_Equipos;
     private ArrayList<Ciclista> L_CiclistasCarrera;
     private ArrayList<Ciclista> L_CiclistasCarreraAbandono;
@@ -29,17 +30,17 @@ public class OrganizacionImpl implements Organizacion
         L_CiclistasCarrera = new ArrayList<>();
         L_CiclistasCarreraAbandono = new ArrayList<>();
         L_CiclistasCarreraAbandonoTotal = new ArrayList<>();
-        L_Etapas = new ArrayList<>();
+        L_Etapas = new TreeSet<>(cEtapa);
         this.cEtapa = cEtapa;
     }
     
     @Override
-    public void setEtapa(ArrayList<Etapa> L_Etapas){
+    public void setEtapa(TreeSet<Etapa> L_Etapas){
         this.L_Etapas = L_Etapas;
     }
     
     @Override
-    public ArrayList<Etapa> getEtapa(){
+    public TreeSet<Etapa> getEtapa(){
         return this.L_Etapas;
     }
     
@@ -189,9 +190,10 @@ public class OrganizacionImpl implements Organizacion
         Collections.sort(L_CiclistasCarrera, Collections.reverseOrder(new TiempoTotalCiclistaComparador()));
         asignarBicisACiclistas();
         
-        for(Ciclista d : L_CiclistasCarrera)
+        for(Ciclista c : L_CiclistasCarrera)
         {
-            res.append(d.toString()+"\n");
+            c.setEtapaActual(etapa.getNombre());
+            res.append(c.toString()+"\n");
         }
 
         res.append("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
@@ -214,8 +216,6 @@ public class OrganizacionImpl implements Organizacion
     public void gestionarCampeonato(){
         
         guardarTodosCiclistas();
-        
-        Collections.sort(L_Etapas, cEtapa);
         
         System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
         System.out.println("||||||||||||||||||| ETAPAS DEL CAMPEONATO |||||||||||||||||||");
@@ -255,7 +255,8 @@ public class OrganizacionImpl implements Organizacion
         int j = 1;
         for(Ciclista c : L_CiclistasCarrera){
             System.out.println("@@@ Posición("+j+"): "+c.getNombreC()+" - Tiempo Total: "+Math.round((c.tiempoTotal())*100d) / 100d+" @@@");
-            for(Resultado r : c.getResultados()){
+            for(Etapa e : L_Etapas){
+                Resultado r = c.getResultado(e);
                 System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getTiempo())*100d) / 100d+" minutos");
             }
             j++;
@@ -268,11 +269,14 @@ public class OrganizacionImpl implements Organizacion
             System.out.println("****************************************************");
             for(Ciclista c : L_CiclistasCarreraAbandonoTotal){
                 System.out.println("--- ciclista Abandonado: "+c.getNombreC()+" - Puntos Totales Anulados: "+c.tiempoTotal()+" ---");
-                for(Resultado r : c.getResultados()){
-                    if(r.isAbandono()){
-                        System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getEnergia())*100d) / 100d+" minutos");
-                    }else{
-                        System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getTiempo())*100d) / 100d+" minutos");
+                for(Etapa e : L_Etapas){
+                    Resultado r = c.getResultado(e);
+                    if(r!=null){
+                        if(r.isAbandono()){
+                            System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getEnergia())*100d) / 100d+" minutos");
+                        }else{
+                            System.out.println("Carrera("+r.getEtapa().getNombre()+") - Tiempo: "+Math.round((r.getTiempo())*100d) / 100d+" minutos");
+                        }
                     }
                 }
             }
