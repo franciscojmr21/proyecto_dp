@@ -1,6 +1,9 @@
 import java.util.Comparator;
 /**
- * Comparador de ciclistas por su energía. Orden descendente
+ * Comparador de ciclistas por su energía. Orden descendente. En caso de empate por nombre
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.12)
  */
 
 public class EnergiaCiclistaComparador implements Comparator<Ciclista>

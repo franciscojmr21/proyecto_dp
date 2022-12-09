@@ -1,18 +1,23 @@
 #BlueJ class context
 comment0.target=CiclistaEstrella
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ CiclistaEstrella\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ del\ ciclista\ estrella\ y\ almacena\ sus\ datos.\r\n\ Esta\ clase\ extiende\ de\ AbstractCiclista\ ya\ que\ tiene\ propiedades\ distintas.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.2)\r\n
 comment1.params=nombreC\ habilidad\ energia\ equipo
 comment1.target=CiclistaEstrella(java.lang.String,\ Habilidad,\ double,\ Equipo)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ CiclistaEstrella\r\n\ \r\n\ @param\ nombreC\ String\ nombre\ del\ ciclista\r\n\ @param\ habilidad\ Habilidad\ enum\ con\ la\ habilidad\ del\ ciclista\r\n\ @param\ energia\ double\ energ\u00EDa\ que\ posee\ el\ ciclista\r\n\ @param\ equipo\ Equipo\ equipo\ al\ que\ pertenece\ el\ ciclista\r\n\ \r\n
 comment2.params=
 comment2.target=double\ destrezaCiclista()
 comment3.params=
 comment3.target=int\ getPopularidad()
+comment3.text=\r\n\ Devuelve\ la\ popularidad\ del\ CiclistaEstrella\r\n\ @return\ popularidad\ int\r\n
 comment4.params=popularidad
 comment4.target=void\ setPopularidadAnterior(int)
+comment4.text=\r\n\ M\u00E9todo\ que\ establece\ la\ popularidad\ que\ ten\u00EDa\ el\ ciclistaEstrella\ en\ la\ anterior\ etapa\r\n\ @param\ popularidad\ int\r\n
 comment5.params=
 comment5.target=int\ getPopularidadAnterior()
+comment5.text=\r\n\ Devuelve\ la\ popularidad\ anterior\ a\ la\ etapa\ realizada\ del\ CiclistaEstrella\r\n\ @return\ popularidadAnterior\ int\r\n
 comment6.params=e
 comment6.target=void\ aumentarPopularidad(Etapa)
+comment6.text=\r\n\ M\u00E9todo\ que\ calcula\ la\ popularidad\ que\ obtiene\ el\ ciclistaEstrella\ al\ relizar\ la\ etapa\r\n\ @param\ e\ Etapa\r\n
 comment7.params=etapa
 comment7.target=java.lang.String\ resultadosEtapa(Etapa)
 comment8.params=

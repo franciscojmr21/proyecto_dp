@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Clase que dedrdr
- * @author 
- * @version 
+ * Clase que ejecuta las funcionalidades del ciclista y almacena sus datos.
+ * Esta clase es abstracta debido a que no se puede instanciar ningún ciclista que no pertenezca a una de sus subclases.
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.17)
  */
 public abstract class AbstractCiclista implements Ciclista {
     private String nombreC;
@@ -14,6 +16,16 @@ public abstract class AbstractCiclista implements Ciclista {
     private ArrayList<Resultado> resultados;
     private Equipo equipo;
     private boolean abandono;
+    
+    /**                                
+     * Constructor de la clase Ciclista
+     * 
+     * @param nombreC String nombre del ciclista
+     * @param habilidad Habilidad enum con la habilidad del ciclista
+     * @param energia double energía que posee el ciclista
+     * @param equipo Equipo equipo al que pertenece el ciclista
+     * 
+     */
     public AbstractCiclista(String nombreC, Habilidad habilidad, double energia,Equipo equipo) {
         this.nombreC = nombreC;
         this.habilidad = habilidad;
@@ -23,11 +35,6 @@ public abstract class AbstractCiclista implements Ciclista {
         this.abandono = false;
     } 
     
-    /**
-     * hjkhuhk
-     * @param abndono 
-     * @return 
-     */
     @Override
     public boolean getAbandono() {
         return abandono;

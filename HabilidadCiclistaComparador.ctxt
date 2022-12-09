@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=HabilidadCiclistaComparador
-comment0.text=\r\n\ Comparador\ de\ ciclistas\ por\ su\ Habilidad.\ Orden\ descendente\r\n
+comment0.text=\r\n\ Comparador\ de\ ciclistas\ por\ su\ Habilidad.\ Orden\ descendente.\ En\ caso\ de\ empate\ por\ nombre\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.12)\r\n
 comment1.params=c1\ c2
 comment1.target=int\ compare(Ciclista,\ Ciclista)
 numComments=2

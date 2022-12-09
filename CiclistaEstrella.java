@@ -1,15 +1,25 @@
 
 /**
- * Write a description of class CiclistaEstrella here.
+ * Clase que ejecuta las funcionalidades del ciclista estrella y almacena sus datos.
+ * Esta clase extiende de AbstractCiclista ya que tiene propiedades distintas.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.2)
  */
 public class CiclistaEstrella extends AbstractCiclista{
 
     private int popularidad;
     private int popularidadAnterior;
-
+    
+    /**                                
+     * Constructor de la clase CiclistaEstrella
+     * 
+     * @param nombreC String nombre del ciclista
+     * @param habilidad Habilidad enum con la habilidad del ciclista
+     * @param energia double energía que posee el ciclista
+     * @param equipo Equipo equipo al que pertenece el ciclista
+     * 
+     */
     public CiclistaEstrella(String nombreC, Habilidad habilidad, double energia, Equipo equipo) {
         super(nombreC, habilidad, energia, equipo);
         this.popularidad = 6;
@@ -21,18 +31,34 @@ public class CiclistaEstrella extends AbstractCiclista{
         return Math.round((((getHabilidad().getHabilidadE() + 6)/140)*10)*100d) / 100d;
     }
 
+    /**
+     * Devuelve la popularidad del CiclistaEstrella
+     * @return popularidad int
+     */
     public int getPopularidad() {
         return popularidad;
     }
     
+    /**
+     * Método que establece la popularidad que tenía el ciclistaEstrella en la anterior etapa
+     * @param popularidad int
+     */
     public void setPopularidadAnterior(int popularidad){
         this.popularidadAnterior = popularidad;
     }
     
+    /**
+     * Devuelve la popularidad anterior a la etapa realizada del CiclistaEstrella
+     * @return popularidadAnterior int
+     */
     public int getPopularidadAnterior(){
         return this.popularidadAnterior;
     }
 
+    /**
+     * Método que calcula la popularidad que obtiene el ciclistaEstrella al relizar la etapa
+     * @param e Etapa
+     */
     public void aumentarPopularidad(Etapa e) {
         int a = this.popularidad;
         setPopularidadAnterior(this.popularidad);

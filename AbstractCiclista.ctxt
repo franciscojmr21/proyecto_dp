@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=AbstractCiclista
-comment0.text=\r\n\ Clase\ que\ dedrdr\r\n\ @author\ \r\n\ @version\ \r\n
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ del\ ciclista\ y\ almacena\ sus\ datos.\r\n\ Esta\ clase\ es\ abstracta\ debido\ a\ que\ no\ se\ puede\ instanciar\ ning\u00FAn\ ciclista\ que\ no\ pertenezca\ a\ una\ de\ sus\ subclases.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.17)\r\n
 comment1.params=nombreC\ habilidad\ energia\ equipo
 comment1.target=AbstractCiclista(java.lang.String,\ Habilidad,\ double,\ Equipo)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ Ciclista\r\n\ \r\n\ @param\ nombreC\ String\ nombre\ del\ ciclista\r\n\ @param\ habilidad\ Habilidad\ enum\ con\ la\ habilidad\ del\ ciclista\r\n\ @param\ energia\ double\ energ\u00EDa\ que\ posee\ el\ ciclista\r\n\ @param\ equipo\ Equipo\ equipo\ al\ que\ pertenece\ el\ ciclista\r\n\ \r\n
 comment10.params=
 comment10.target=double\ getEnergia()
 comment11.params=energia
@@ -25,7 +26,6 @@ comment19.params=
 comment19.target=int\ etapasTerminadas()
 comment2.params=
 comment2.target=boolean\ getAbandono()
-comment2.text=\r\n\ hjkhuhk\r\n\ @param\ abndono\ \r\n\ @return\ \r\n
 comment20.params=
 comment20.target=double\ tiempoTotal()
 comment21.params=
