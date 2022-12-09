@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=ResultadoImpl
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ de\ los\ resultados\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.8)\r\n
+comment1.params=tiempo\ abandono\ etapa\ energia
+comment1.target=ResultadoImpl(double,\ boolean,\ Etapa,\ double)
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ Resultado\r\n\ \r\n\ @param\ tiempo\ doube\ tiempo\ que\ se\ tarda\ en\ realizar\ la\ etapa\r\n\ @param\ abandono\ boolean\ si\ ha\ abandonado\ el\ ciclista\ la\ etapa\r\n\ @param\ etapa\ etapa\ \ etapa\ corrida\r\n\ @param\ energia\ double\ energia\ restante\ de\ la\ etapa\r\n\ \r\n
+comment2.params=
+comment2.target=double\ getTiempo()
+comment3.params=tiempo
+comment3.target=void\ setTiempo(double)
+comment4.params=
+comment4.target=boolean\ isAbandono()
+comment5.params=abandono
+comment5.target=void\ setAbandono(boolean)
+comment6.params=
+comment6.target=Etapa\ getEtapa()
+comment7.params=etapa
+comment7.target=void\ setEtapa(Etapa)
+comment8.params=
+comment8.target=double\ getEnergia()
+comment9.params=energia
+comment9.target=void\ setEnergia(double)
+numComments=10

@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Collections;
 import java.util.Comparator;
+/**
+ * Clase que ejecuta las funcionalidades de la organizacion y almacena sus datos.
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.9)
+ */
 public class OrganizacionImpl implements Organizacion
 {
     private ArrayList<Etapa> L_Etapas;
@@ -10,8 +16,12 @@ public class OrganizacionImpl implements Organizacion
     private ArrayList<Ciclista> L_CiclistasCarreraAbandono;
     private ArrayList<Ciclista> L_CiclistasCarreraAbandonoTotal;
     private Comparator<Etapa> cEtapa;
-    /**
-     * Constructor for objects of class Organizacion
+    
+    /**                                
+     * Constructor de la clase OrganizacionImpl
+     * 
+     * @param cEtapa Comparator<Etapa> comparador de etapas
+     * 
      */
     public OrganizacionImpl(Comparator<Etapa> cEtapa)
     {
@@ -23,42 +33,52 @@ public class OrganizacionImpl implements Organizacion
         this.cEtapa = cEtapa;
     }
     
+    @Override
     public void setEtapa(ArrayList<Etapa> L_Etapas){
         this.L_Etapas = L_Etapas;
     }
     
+    @Override
     public ArrayList<Etapa> getEtapa(){
         return this.L_Etapas;
     }
     
+    @Override
     public void addEtapa(Etapa etapa){
         L_Etapas.add(etapa);
     }
 
+    @Override
     public void setL_Equipos(ArrayList<Equipo> L_Equipos){
         this.L_Equipos = L_Equipos;
     }
 
+    @Override
     public ArrayList<Equipo> getL_Equipos(){
         return this.L_Equipos;
     }
 
+    @Override
     public void setL_CiclistasCarrera(ArrayList<Ciclista> L_CiclistasCarrera){
         this.L_CiclistasCarrera = L_CiclistasCarrera;
     }
 
+    @Override
     public ArrayList<Ciclista> getL_CiclistasCarrera(){
         return this.L_CiclistasCarrera;
     }
     
+    @Override
     public void addEquipo(Equipo equipo){
         L_Equipos.add(equipo);
     }
 
+    @Override
     public void addCiclista(Ciclista ciclista){
         L_CiclistasCarrera.add(ciclista);
     }
 
+    @Override
     public String informacionEtapa()
     {
         StringBuilder res = new StringBuilder();
@@ -68,6 +88,7 @@ public class OrganizacionImpl implements Organizacion
         return res.toString();
     }
     
+    @Override
     public String equiposInfo()
     {
         StringBuilder res = new StringBuilder();
@@ -77,6 +98,7 @@ public class OrganizacionImpl implements Organizacion
         return res.toString();
     }
     
+    @Override
     public void guardarTodosCiclistas(){
         ArrayList<Ciclista> lCiclistas = new ArrayList<>();
         for(Equipo equipo : L_Equipos){
@@ -87,12 +109,14 @@ public class OrganizacionImpl implements Organizacion
         }
     }
     
+    @Override
     public void asignarBicisACiclistas(){
         for(Equipo e : L_Equipos){
             e.asignarBicis();
         }
     }
     
+    @Override
     public ArrayList<Ciclista> getL_Ciclistas()
     {
         ArrayList <Ciclista> L_CiclistasEquipo;
@@ -112,6 +136,7 @@ public class OrganizacionImpl implements Organizacion
         return L_Ciclistas;
     }
     
+    @Override
     public String clasificacionEtapa(ArrayList<Ciclista> L_Ciclistas, Etapa etapa)
     {
         int i;
@@ -149,6 +174,7 @@ public class OrganizacionImpl implements Organizacion
         return res.toString();
     }
     
+    @Override
     public String ejecutarEtapa(Etapa etapa)
     {
         StringBuilder res = new StringBuilder();
@@ -184,6 +210,7 @@ public class OrganizacionImpl implements Organizacion
         return res.toString();
     }
     
+    @Override
     public void gestionarCampeonato(){
         
         guardarTodosCiclistas();

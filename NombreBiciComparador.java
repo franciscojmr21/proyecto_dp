@@ -1,6 +1,9 @@
 import java.util.Comparator;
 /**
  * Comparador de bicicletas por su nombre. Orden alfabetico
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.1)
  */
 
 public class NombreBiciComparador implements Comparator<Bicicleta>

@@ -1,7 +1,10 @@
 import java.util.Comparator;
 import java.util.Collections;
 /**
- * Comparador de biciceltas por su peso. Orden descendente
+ * Comparador de biciceltas por su peso. Orden descendente. En caso de igualdad por nombre.
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.2)
  */
 
 public class PesoBiciComparador implements Comparator<Bicicleta>

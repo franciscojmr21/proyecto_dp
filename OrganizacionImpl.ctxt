@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=OrganizacionImpl
+comment0.text=\r\n\ Clase\ que\ ejecuta\ las\ funcionalidades\ de\ la\ organizacion\ y\ almacena\ sus\ datos.\r\n\ \r\n\ @author\ (Sergio\ Jim\u00E9nez\ Arroyo\ y\ Francisco\ Javier\ Mu\u00F1oz\ Ruiz)\ \r\n\ @version\ (1.9)\r\n
 comment1.params=cEtapa
 comment1.target=OrganizacionImpl(java.util.Comparator)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Organizacion\r\n
+comment1.text=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Constructor\ de\ la\ clase\ OrganizacionImpl\r\n\ \r\n\ @param\ cEtapa\ Comparator<Etapa>\ comparador\ de\ etapas\r\n\ \r\n
 comment10.params=ciclista
 comment10.target=void\ addCiclista(Ciclista)
 comment11.params=

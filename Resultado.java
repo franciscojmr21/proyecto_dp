@@ -1,45 +1,57 @@
-public class Resultado {
-    private double tiempo;
-    private boolean abandono;
-    private Etapa etapa;
-    private double energia;
 
-    public Resultado(double tiempo, boolean abandono, Etapa etapa, double energia) {
-        this.tiempo = tiempo;
-        this.abandono = abandono;
-        this.etapa = etapa;
-        this.energia = energia;
-    }
+/**
+ * Interfaz con las funcionalidades de los resultados y almacena sus datos.
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.5)
+ */
+public interface Resultado
+{
+    /**
+     * Devuelve el tiempo de la etapa
+     * @return nombre String
+     */
+    double getTiempo();
 
-    public double getTiempo() {
-        return tiempo;
-    }
+    /**
+     * Método que establece el tiempo de la etapa
+     * @param tiempo double
+     */
+    void setTiempo(double tiempo);
 
-    public void setTiempo(double tiempo) {
-        this.tiempo = tiempo;
-    }
+    /**
+     * Devuelve si el ciclista ha abandonado la competicion la etapa
+     * @return abandono boolean
+     */
+    boolean isAbandono();
 
-    public boolean isAbandono() {
-        return abandono;
-    }
+    /**
+     * Método que establece si ha abandonado el ciclista la competicion en la etapa
+     * @param abandono boolean
+     */
+    void setAbandono(boolean abandono);
 
-    public void setAbandono(boolean abandono) {
-        this.abandono = abandono;
-    }
+    /**
+     * Devuelve la etapa
+     * @return etapa Etapa
+     */
+    Etapa getEtapa();
 
-    public Etapa getEtapa() {
-        return etapa;
-    }
+    /**
+     * Método que establece la etapa donde se obtinen los resultados
+     * @param etapa Etapa
+     */
+    void setEtapa(Etapa etapa);
 
-    public void setEtapa(Etapa etapa) {
-        this.etapa = etapa;
-    }
+    /**
+     * Devuelve la energia restante del ciclista en la etapa
+     * @return energia double
+     */
+    double getEnergia();
 
-    public double getEnergia() {
-        return energia;
-    }
-
-    public void setEnergia(double energia) {
-        this.energia = energia;
-    }
+    /**
+     * Método que establece la energia restante del ciclista en la etapa
+     * @param energia double
+     */
+    void setEnergia(double energia);
 }
