@@ -1,7 +1,10 @@
 import java.util.Comparator;
 import java.util.Collections;
 /**
- * Comparador de ciclistas por su tiempo. Orden ascendente
+ * Comparador de ciclistas por su tiempo total en el camponato. Orden ascendente. En caso de empate por nombre
+ * 
+ * @author (Sergio Jiménez Arroyo y Francisco Javier Muñoz Ruiz) 
+ * @version (1.12)
  */
 
 public class TiempoTotalCiclistaComparador implements Comparator<Ciclista>
