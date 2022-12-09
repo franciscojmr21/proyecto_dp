@@ -49,7 +49,11 @@ public interface Equipo
     
     double getTiempoMedioTotal();
     
+    double getTiempoMedioTotalSinAbandonar();
+    
     double getTotalPoints();
+    
+    void ordenFinalCampeonato();
     
     String toString();
 }

@@ -135,6 +135,19 @@ public class EquipoImpl implements Equipo
         return total;
     }
     
+    public double getTiempoMedioTotalSinAbandonar(){
+        double total = 0.0;
+        int count = 0;
+        for(Ciclista c : L_Ciclistas){
+            if(!c.getAbandono()){
+                total = total + c.tiempoTotal();
+                count++;
+            }
+        }
+        total = Math.round((total/count)*100d) / 100d;
+        return total;
+    }
+    
     public double getTotalPoints()
     {
         double totalPoints;
@@ -150,6 +163,26 @@ public class EquipoImpl implements Equipo
         }
         
         return totalPoints;
+    }
+    
+    public void ordenFinalCampeonato(){
+        ArrayList<Ciclista> L_CiclistasNoAbandonos = new ArrayList<>();
+        for(Ciclista c : L_Ciclistas){
+            if(!c.getAbandono()){
+                L_CiclistasNoAbandonos.add(c);
+            }else{
+                L_CiclistasAbandonado.add(c);
+            }
+        }
+        Collections.sort(L_CiclistasNoAbandonos, C_Ciclistas);
+        Collections.sort(L_CiclistasAbandonado, C_Ciclistas);
+        L_Ciclistas.clear();
+        for(Ciclista c : L_CiclistasNoAbandonos){
+            L_Ciclistas.add(c);
+        }
+        for(Ciclista c : L_CiclistasAbandonado){
+            L_Ciclistas.add(c);
+        }
     }
     
     public String toString()
